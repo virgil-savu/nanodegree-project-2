@@ -93,7 +93,7 @@ var projects = {
 	]
 }
 
-function displayBio() {
+bio.display = function() {
 
 		var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
 		var formattedName = HTMLheaderName.replace("%data%",bio.name);
@@ -144,9 +144,11 @@ function displayBio() {
 
 }
 
-displayBio();
+bio.display();
 
-function displayWork() {
+
+
+work.display = function() {
 	for (job in work.jobs) {
 		//create new div for work experience
 		$("#workExperience").append(HTMLworkStart);
@@ -165,7 +167,7 @@ function displayWork() {
 	}
 }
 
-displayWork();
+work.display();
 
 
 
